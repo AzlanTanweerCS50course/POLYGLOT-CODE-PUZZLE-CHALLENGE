@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Tile Puzzle - High-Tech Dev Interface</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Hack Devengers2.0 PUZZLE GAME </h1>
+    <!-- NEW TEXT HERE -->
+    <p class="subtitle">Arrange the puzzle 1 to 8 and use AI when stuck!!! </p>
+
+    <div class="stats">
+      <span>Moves: <strong id="move-count">0</strong></span>
+      <span>Status: <strong id="status-text"> PLAYING</strong></span>
+    </div>
+
+    <!-- 3x3 Puzzle Board -->
+    <div id="board" class="board"></div>
+
+    <div class="controls">
+      <button id="shuffle-btn" class="btn primary">INITIALIZE SHUFFELING </button>
+      <button id="solve-btn" class="btn secondary">AI AUTO-SOLVER</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

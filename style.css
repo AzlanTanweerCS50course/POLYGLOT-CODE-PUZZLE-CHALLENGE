@@ -1,0 +1,150 @@
+/* --- High-Tech Dev Interface Theme --- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Monospace font gives it the developer look */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  /* Very dark blue/black background */
+  background-color: #010409;
+  /* A subtle cyan glow */
+  color: #38bdf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Adds a slight "pixel scan" effect to the whole page */
+  background-image: linear-gradient(0deg, #010409 0%, rgba(2, 6, 23, 0.9) 100%);
+}
+
+.container {
+  /* Semi-transparent container with clear edges */
+  background-color: rgba(10, 15, 25, 0.9);
+  padding: 2rem;
+  border-radius: 4px; /* More angular/technical */
+  border: 1px solid #1e293b; /* Subtle line border */
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15); /* Soft neon glow */
+  text-align: center;
+  width: 380px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #f8fafc; /* Keep title white */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #38bdf8; /* The main tech color */
+  background-color: rgba(56, 189, 248, 0.1);
+  padding: 5px 0;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* 3x3 Grid Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6px; /* Slightly tighter gap */
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 1.5rem auto;
+  /* The "frame" of the board */
+  background-color: #0f172a;
+  padding: 6px;
+  border: 2px solid #1e293b;
+  border-radius: 4px;
+}
+
+.tile {
+  /* Sleek, dark gray tiles */
+  background-color: #161b22;
+  color: #f8fafc;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  /* Angular border */
+  border: 1px solid #30363d;
+  transition: all 0.1s ease;
+}
+
+/* Tile hover effect: subtle cyan glow */
+.tile:hover {
+  background-color: #1e293b;
+  border-color: #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+.tile.empty {
+  background-color: transparent;
+  border: 1px solid rgba(30, 54, 75, 0.3);
+  cursor: default;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.85rem;
+  border: 2px solid; /* Stronger borders */
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent; /* No fill by default */
+}
+
+/* Cyan/Tech Primary Button */
+.btn.primary {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.btn.primary:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+/* Green/Execution Secondary Button */
+.btn.secondary {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.25);
+}
+
+.btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #475569;
+  color: #475569;
+}
